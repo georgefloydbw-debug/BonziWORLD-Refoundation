@@ -12,10 +12,6 @@ I expect these users to read the rules for the website in this readme md file on
 - **No flooding**. Flood only in the room ID: "flood-room". If you have been caught flooding in public room, punishment: Banned.
 - **No spamming unless it is okay**. Punishments: either muted, kicked or banned
 - **No leaking the godword**. Doing this will immediately result in a different godmode password. Punishment: Kicked/Banned
-- **No Baby Einstein**. No, fuck Baby Einstein. Okay, seriously, why in holy hell do you need that child shit? Baby Einstein is for kiddies and noobs. Do not post content related to Baby Einstein. Punishment: Muted/kicked/banned
-- **No Friday Night Funkin'**. The game's characters and fan-made characters is used by people for breaking this rule. Any sightings of FNF that are seen by admins will result in a kick. If you are known as Hungaryball/Geri/Whitty/Anything, you will be banned.
-- **No PinkFong**. The company's characters is used by people for breaking this rule (i.e. posting videos such as the Potty Song). Any sightings of PinkFong that are seen by admins will result in a kick. If you are known as PinkFong/Hogi/Baby Shark/Jeni/Bebefinn/Bebba/Poki/Ninimo/Anything, you will be banned.
-- **No PBS Kids**. Do not post content related to PBS Kids. I do not tolerate any PBS Kids-related content. Posting these videos can get you muted, kicked or banned immediately.
 
 Violation of these rules/guidelines will result in a mute, a kick and/or a ban.
 
