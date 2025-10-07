@@ -2,14 +2,8 @@
 
 𝙲𝚛𝚎𝚍𝚒𝚝𝚜 𝚝𝚘 𝙲𝚘𝚗𝚜𝚝𝚊𝚗𝚜𝚊𝚖𝚞𝚎𝚕
 
-## Are there notable differences?
-Yes, there are.
-
-* **Original**:
-* * **Unedited:** Joseph Judge was the only creator of the original BonziWORLD. Pretty cool huh? Original BonziWORLD features black/brown/red/green/blue/purple/pink/pope bonzis, with some commands.
-  * **Modified:** The original BonziWORLD 2 was currently abandoned by Seamus. I understand why he created it but then later took it down due to kiddies back in 2020. There are also more bonzis: magenta, yellow, emerald, diamond and orange.
-* **Replica**: Kind of, accurately done by me via creating bonzis with Paint.NET and usually replacing original BZW images with modified BZW images or literal shit.
-
+### ─────── | ━━━━⊱[̲̅P][̲̅a][̲̅g][̲̅e]⊰━━━━ | ───────
+ 
 ## Website Rules/Guidelines
 
 I expect these users to read the rules for the website in this readme md file on my github respiratory.
