@@ -1,17 +1,7 @@
-#                            BonziWORLD Refoundation                                                                                                                                                        
+# 𝘽𝙤𝙣𝙯𝙞𝙒𝙊𝙍𝙇𝘿 𝙍𝙚𝙛𝙤𝙪𝙣𝙙𝙖𝙩𝙞𝙤𝙣 (𝕀𝕟𝕤𝕡𝕚𝕣𝕖𝕕 𝕓𝕪 𝔹𝕠𝕟𝕫𝕚𝕎𝕆ℝ𝕃𝔻 𝟚)
+
 All the source code for the server and client is publically available here. If you want to run a fork of my replica BonziWORLD 2, by all means go ahead.
 Do whatever you'd like with this code. Just try to put me somewhere in the credits.
-
-## Special Thanks To:
-
-- Joseph Judge (original; he was known as the creator of the original BonziWORLD)
-- Seamus (original creator of BW2; creator of bonkey.world (dead)/BWCE (bloated shitty server) (indefinitely dead))
-- Fune 720 (i guess i gave him special thanks after the war ended; creator of BonziWORLD.org)
-- DonutScout (Maxwell Finch) (i think)
-- gir (maybe)
-- earthbound/scumbag (i guess)
-- marco (i think)
-
 
 ## Are there notable differences?
 Yes, there are.
@@ -42,15 +32,6 @@ Violation of these rules/guidelines will result in a mute, a kick and/or a ban.
 - Sass
 - Git
 - Cordova (Optional)
-
-## Setup
-In a terminal/command prompt, navigate to where you'd like BonziWORLD 2 to be placed and run the following:
-```
-git clone https://github.com/ItzUltraChace/BonziWORLD-2-Replica
-cd BonziWORLD 2 Replica
-```
-
-
 
 ### Server
 ```
