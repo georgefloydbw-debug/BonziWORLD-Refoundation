@@ -64,7 +64,7 @@ function showNotification(notification) {
     if (settings.notifications !== false) {
       chrome.notifications.create({
         type: 'basic',
-        iconUrl: 'C:/Extension/48x48.png',
+        iconUrl: 'Extension/assets/48x48.png',
         title: notification.title || 'BonziWORLD',
         message: notification.message,
         priority: 2
@@ -76,4 +76,5 @@ function showNotification(notification) {
 // Handle notification clicks
 chrome.notifications.onClicked.addListener((notificationId) => {
   chrome.tabs.create({ url: bonziworld-refoundation.onrender.com });
+
 });
