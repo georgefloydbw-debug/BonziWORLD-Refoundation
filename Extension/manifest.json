@@ -7,19 +7,19 @@
   "author": "BonziWORLD Refoundation Team",
   
   "icons": {
-    "16": "Extension/16x16.png",
-    "32": "Extension/32x32.png",
-    "48": "Extension/48x48.png",
-    "64": "Extension/64x64.png",
-    "128": "Extension/128x128.png"
+    "16": "Extension/assets/16x16.png",
+    "32": "Extension/assets/32x32.png",
+    "48": "Extension/assets/48x48.png",
+    "64": "Extension/assets/64x64.png",
+    "128": "Extension/assets/128x128.png"
   },
 
   "action": {
     "default_title": "Open BonziWORLD",
     "default_icon": {
-      "16": "Extension/16x16.png",
-      "32": "Extension/32x32.png",
-      "48": "Extension/48x48.png"
+      "16": "Extension/assets/16x16.png",
+      "32": "Extension/assets/32x32.png",
+      "48": "Extension/assets/48x48.png"
     },
     "default_popup": "popup.html"
   },
@@ -65,4 +65,5 @@
   },
 
   "options_page": "options.html"
+
   }
