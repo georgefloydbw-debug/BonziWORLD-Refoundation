@@ -7,7 +7,6 @@
   "author": "BonziWORLD Refoundation Team",
   
   "icons": {
-    "16": "Extension/assets/16x16.png",
     "32": "Extension/assets/32x32.png",
     "48": "Extension/assets/48x48.png",
     "64": "Extension/assets/64x64.png",
@@ -67,3 +66,4 @@
   "options_page": "options.html"
 
   }
+
