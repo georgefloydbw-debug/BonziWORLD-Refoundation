@@ -4,6 +4,8 @@ const Utils = require("./utils.js");
 const io = require('./index.js').io;
 const settings = require("./settings.json");
 const sanitize = require('sanitize-html');
+const BonziMarkdown = require('./markdown.js');
+const bonziMarkdown = new BonziMarkdown();
 
 let roomsPublic = [];
 let rooms = {};
@@ -129,9 +131,11 @@ let userCommands = {
         this.private.sanitize = !sanitizeTerms.includes(argsString.toLowerCase());
     },
     "joke": function() {
+        const jokeMessage = "Here is a joke for you!";
+        const parsedJokeMessage = bonziMarkdown.parse(jokeMessage);
         this.room.emit("joke", {
             guid: this.guid,
-            rng: Math.random()
+            text: parsedJokeMessage
         });
     },
     "fact": function() {
@@ -179,7 +183,7 @@ let userCommands = {
             this.socket.emit("alert", "admin=true");
             return;
         }
-        
+
         let pu = this.room.getUsersPublic()[data];
         if (pu && pu.color) {
             let target;
@@ -297,7 +301,6 @@ let userCommands = {
         this.room.updateUser(this);
     }
 };
-
 
 class User {
     constructor(socket) {
@@ -462,9 +465,11 @@ class User {
 
         let text = this.private.sanitize ? sanitize(data.text) : data.text;
         if ((text.length <= this.room.prefs.char_limit) && (text.length > 0)) {
+            // Parse the message using BonziMarkdown
+            const parsedMessage = bonziMarkdown.parse(text);
             this.room.emit('talk', {
                 guid: this.guid,
-                text: text
+                text: parsedMessage
             });
         }
     }
