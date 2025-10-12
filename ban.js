@@ -3,7 +3,6 @@ const fs = require('fs-extra');
 const settings = require("./settings.json");
 const io = require('./index.js').io;
 
-
 let bans;
 
 exports.init = function() {
@@ -30,13 +29,13 @@ exports.saveBans = function() {
 	);
 };
 
-// Ban length is in minutes
+// Ban length is in minutes (but will be ignored for permanent bans)
 exports.addBan = function(ip, length, reason) {
-	length = parseFloat(length) || settings.banLength;
 	reason = reason || "N/A";
 	bans[ip] = {
 		reason: reason,
-		end: new Date().getTime() + (length * 60000)
+		// Remove the end time to make the ban permanent
+		end: length === 'permanent' ? null : new Date().getTime() + (length * 60000)
 	};
 
 	var sockets = io.sockets.sockets;
@@ -57,7 +56,7 @@ exports.removeBan = function(ip) {
 
 exports.handleBan = function(socket) {
 	var ip = socket.request.connection.remoteAddress;
-	if (bans[ip].end <= new Date().getTime()) {
+	if (bans[ip].end !== null && bans[ip].end <= new Date().getTime()) {
 		exports.removeBan(ip);
 		return false;
 	}
