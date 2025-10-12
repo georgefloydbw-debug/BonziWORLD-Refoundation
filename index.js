@@ -1,9 +1,11 @@
-// ======================================================================== 
+// ========================================================================
 // Server init
 // ========================================================================
 
 // Filesystem reading functions
 const fs = require('fs-extra');
+const BonziMarkdown = require('./markdown.js');
+const bonziMarkdown = new BonziMarkdown();
 
 // Load settings
 try {
@@ -86,3 +88,21 @@ Meat.beat();
 // Console commands
 const Console = require('./console.js');
 Console.listen();
+
+// Socket.io connection event
+io.on('connection', (socket) => {
+    console.log('A user connected');
+
+    socket.on('chat message', (msg) => {
+        // Parse the message using BonziMarkdown
+        const parsedMessage = bonziMarkdown.parse(msg);
+
+        // Emit the parsed message to the client
+        io.emit('chat message', parsedMessage);
+    });
+
+    socket.on('disconnect', () => {
+        console.log('A user disconnected');
+    });
+});
+```__
