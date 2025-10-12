@@ -4,12 +4,19 @@ let commands = {
     "ban": {
         "help": "ip [length reason]",
         "function": function(args) {
-			if (args.length === 0)
-				return console.log(this.help);
-				
+            if (args.length === 0)
+                return console.log(this.help);
+
             let ip = args[0];
             let length = args[1];
             let reason = args.slice(2).join(" ");
+
+            // Check if the length is 'permanent'
+            if (length === 'permanent') {
+                length = 'permanent';
+            } else {
+                length = parseFloat(length) || 60; // Default to 60 minutes if not specified
+            }
 
             Ban.addBan(ip, length, reason);
             console.log(
@@ -23,9 +30,9 @@ let commands = {
     "kick": {
         "help": "ip [reason]",
         "function": function(args) {
-			if (args.length === 0)
-				return console.log(this.help);
-				
+            if (args.length === 0)
+                return console.log(this.help);
+
             let ip = args[0];
             let reason = args.slice(1).join(" ");
 
@@ -42,9 +49,9 @@ let commands = {
     "unban": {
         "help": "ip",
         "function": function(args) {
-			if (args.length === 0)
-				return console.log(this.help);
-			
+            if (args.length === 0)
+                return console.log(this.help);
+
             let ip = args[0];
             Ban.removeBan(ip);
             console.log("unban: " + ip);
@@ -53,9 +60,9 @@ let commands = {
     "help": {
         "function": function() {
             let keys = Object.keys(commands);
-			for (var i = 0; i < keys.length; i++) {
+            for (var i = 0; i < keys.length; i++) {
                 let key = keys[i];
-				console.log(key + ":\t" + (commands[key].help || 'N/A'));
+                console.log(key + ":\t" + (commands[key].help || 'N/A'));
             }
         }
     }
