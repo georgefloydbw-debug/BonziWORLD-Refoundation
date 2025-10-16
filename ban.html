@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ban User</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        // Connect to the server
+        const socket = io();
+
+        // Function to handle ban duration selection
+        function selectBanDuration(duration) {
+            // Send the selected duration to the server
+            socket.emit('banUser', {
+                ip: selectedIp, // Ensure selectedIp is defined and holds the target IP
+                duration: duration,
+                reason: 'Permanent ban' // You can customize the reason as needed
+            });
+        }
+    </script>
+</head>
+<body>
+    <h1>Ban User</h1>
+    <div id="banDurationSelector">
+        <select onchange="selectBanDuration(this.value)">
+            <option value="60">1 hour</option>
+            <option value="120">2 hours</option>
+            <option value="240">4 hours</option>
+            <option value="720">12 hours</option>
+            <option value="1440">1 day</option>
+            <option value="2880">2 days</option>
+            <option value="4320">3 days</option>
+            <option value="10080">1 week</option>
+            <option value="20160">2 weeks</option>
+            <option value="permanent">Permanent</option>
+        </select>
+    </div>
+</body>
+</html>
